@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>TextUtils</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">TextUtils</a>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Hello User!</strong> We warmly welcome you to the TextUtils Website.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <div class="container mt-4">
+        <form action="/analyze" method="GET">
+            <div class="input-group">
+                <span class="input-group-text">Enter text and we will do the magic!!!</span>
+                <textarea class="form-control" name="text" aria-label="With textarea" rows="6"></textarea>
+            </div>
+            <div class="form-check form-switch mt-2">
+                <input class="form-check-input" name="removepunc" type="checkbox" id="flexSwitchCheck1">
+                <label class="form-check-label" for="flexSwitchCheck1">Remove Punctuations</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" name="fullcaps" type="checkbox" id="flexSwitchCheck2">
+                <label class="form-check-label" for="flexSwitchCheck2">Capitalize Whole Text</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" name="spacerem" type="checkbox" id="flexSwitchCheck3">
+                <label class="form-check-label" for="flexSwitchCheck3">Extra Space Remover</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" name="charcount" type="checkbox" id="flexSwitchCheck4">
+                <label class="form-check-label" for="flexSwitchCheck4">Character Count</label>
+            </div>
+            <button type="submit" class="btn btn-dark mt-2">Analyze Text</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
